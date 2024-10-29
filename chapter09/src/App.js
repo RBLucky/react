@@ -6,7 +6,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import 'firebase/compat/database';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -18,12 +18,12 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <Routes>
+            <Switch>
               <Route path="/edit/:id" component={UserForm} />
               <Route exact path="/add" component={UserForm} />
               <Route exact path="/" component={User} />
               <Route path="/*" component={NotFound} />
-            </Routes>
+            </Switch>
           </div>
         </BrowserRouter>
       </div>
