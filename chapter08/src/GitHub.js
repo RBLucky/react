@@ -19,7 +19,7 @@ class GitHub extends Component {
     //react hook
     //called when the component is first rendered
     // componentDidMount() {
-    //     this.getGitHubData('J4d4');
+    //     this.getGitHubData('Lucky');
     // }
 
     handleChange(e) {
