@@ -1,25 +1,24 @@
-import React, {Component} from 'react';
-import Products from './Products';
+import logo from "./logo.svg";
+import React, { Component } from "react";
+import Products from "./Products";
+import {Button} from 'react-bootstrap';
+import Rating from './Rating';
 
 class App extends Component {
-  formatName(user) {
-    return user.firstName + " " + user.lastName + " 👋";
-  }
   render() {
-    const user = {
-      firstName: "Lucky",
-      lastName: "Nkosi"
-    };
-
+    const isValid = true;
     return (
-    <div>
-      {/* <h1>My First React App!</h1> */}
+      <div> 
+        {/* <Products /> */}
+        {/* <Button variant = "primary" disabled={!isValid} >Default</Button> */}
 
-      <h1>Hello, {this.formatName(user)}</h1>
-
-      <Products />
-    </div>
-    )
+        <Rating rating="1"/>
+        <Rating rating="2"/>
+        <Rating rating="3"/>
+        <Rating rating="4"/> 
+        <Rating rating="5"/>
+      </div>
+    );
   }
 }
 
